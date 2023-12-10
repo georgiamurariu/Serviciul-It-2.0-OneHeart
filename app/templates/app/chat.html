@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            
+         
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          margin: 0;
+          font-family: 'Arial', sans-serif;
+          justify-content: center;  
+          backdrop-filter: blur(5px);
+
+          *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+
+          }
+        }
+     
+
+    .container iframe {
+        margin: 0;
+        padding: 0;
+        border: none;
+        width: 80%; 
+        height: 50%; 
+    }
+
+    #chat-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 60px;
+        }
+       
+    
+      </style>
+  
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const messageInput = document.getElementById('message-input');
+            const sendButton = document.getElementById('send-button');
+            const chatMessages = document.getElementById('chat-messages');
+
+            sendButton.addEventListener('click', function() {
+                const messageText = messageInput.value.trim();
+
+                if (messageText !== '') {
+                    appendMessage('You', messageText);
+                    messageInput.value = '';
+
+                   
+                    setTimeout(function() {
+                        appendMessage('Assistant', 'I apologize for the inconvenience, but all our operators are currently occupied. '+'Please wait, and someone will assist you shortly. Thank you for your patience.');
+                    }, 500);
+                }
+            });
+
+            function appendMessage(sender, message) {
+                const messageElement = document.createElement('div');
+                messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+                chatMessages.appendChild(messageElement);
+
+              
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <a href="./mainpage.html" class="logo">OneHeart</a>
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <button class="dropbtn">
+                        <img src="account.png" alt="Account Icon">
+                    </button>
+                <div class="dropdown-content">
+                    <a href="./signIN.html">Sign In</a>
+                    <a href="./login.html">Log In</a>
+                    <a href="./generate_qr_code.html">CodeQR-PROFILE</a>
+                  </div>
+              </div>
+              <a href="./mainpage.html">Home</a>
+              <a href="./chat.html">Do you need help?</a>
+              <a href="./news.html">News</a>
+              <a href="./index.html">Calendar</a>
+              <a href="./contact.html">Contact</a>
+              <a href="./translate.html">Audio-Theatre</a>
+              <a href="./Communty.html">Clubs</a>
+            
+        </nav>
+    </header>
+    <div id="chat-image" style="margin-left:28cm; margin-top:20cm;"><img src="./chat.png"/></div> 
+    <div id="chat-image"  style="margin-left:10cm"><img src="./emergency.png"/></div>
+    <table>
+        
+        <tr>
+            <td style="margin-right:10px;">  
+                
+                <iframe src="https://www.google.com/maps/d/embed?mid=1KpRSX1UjOCr2yyr7s32xd5pSnbHB1m8&ehbc=2E312F" width="640" height="480"></iframe>
+                </td>
+                <td>
+                    <div id="chat-container"style="margin-left:50px;" >
+                        <div id="chat-messages"></div>
+                        <div id="input-container">
+                            <input type="text" id="message-input" placeholder="Type your message...">
+                            <button id="send-button">Send</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+           
+    </table>
+   
+
+   
+  
+</body>
+</html>
+ 

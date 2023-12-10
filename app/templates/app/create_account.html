@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account</title>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="./mainpage.html" class="logo">OneHeart</a>
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="account.png" alt="Account Icon">
+                </button>
+                <div class="dropdown-content">
+                    <a href="./signIN.html">Sign In</a>
+                    <a href="./login.html">Log In</a>
+                    <a href="./generate_qr_code.html">CodeQR-PROFILE</a>
+                </div>
+            </div>
+            <a href="./mainpage.html">Home</a>
+            <a href="./chat.html">Do you need help?</a>
+            <a href="./news.html">News</a>
+            <a href="./index.html">Calendar</a> 
+            <a href="./contact.html">Contact</a>
+            <a href="./translate.html">Audio-Theatre</a>
+            <a href="./Communty.html">Clubs</a>
+        </nav>
+    </header>
+    <h2>Create Account</h2>
+    <form method="post" action="{% url 'create_account' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        // Replace 'user-data' with the actual data you want to encode
+        var userData = {
+            name: '{{ user_profile.name }}',
+            language: '{{ user_profile.language }}'
+        };
+    
+        var qr = new QRCode(document.getElementById("qrcode"), {
+            text: JSON.stringify(userData),
+            width: 128,
+            height: 128
+        });
+    </script>
+    
+</body>
+</html>

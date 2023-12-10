@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Clubs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            margin-top: 20px; /* Adjust the margin-top value based on your preference */
+            border-spacing: 10cm; /* Adjust the border-spacing value based on your preference */
+        }
+    </style>
+</head>
+<body>
+    <header class="header" style="margin-bottom: 20px;">
+        <a href="./mainpage.html" class="logo">OneHeart</a>
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <button class="dropbtn">
+                        <img src="account.png" alt="Account Icon">
+                    </button>
+                <div class="dropdown-content">
+                    <a href="signIN.html">Sign In</a>
+                    <a href="login.html">Log In</a>
+                    <a href="./generate_qr_code.html">CodeQR-PROFILE</a>
+                </div>
+            </div>
+            <a href="mainpage.html">Home</a>
+            <a href="./chat.html">Do you need help?</a>
+            <a href="news.html">News</a>
+            <a href="index.html">Calendar</a> 
+            <a href="./contact.html">Contact</a>
+            <a href="./translate.html">Audio-Theatre</a>
+            <a href="./Communty.html">Clubs</a>
+        </nav>
+    </header>
+    <table>
+        <tr>
+            <td>
+                <img src="./clubs.png"/>
+                <h2 style="text-align: center;">Get to know</h2>
+                <button onclick="enrollInBookClub1()">Enroll</button>
+            </td>
+            <td>
+                <img src="./clubs.png"/>
+                <h2 style="text-align: center;">Book Club</h2>
+                <button onclick="enrollInBookClub2()">Enroll</button>
+            </td>
+            <td>
+                <img src="./clubs.png"/>
+                <h2 style="text-align: center;">General</h2>
+                <button onclick="enrollInBookClub3()">Enroll</button>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- generate_qr_code.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code</title>
+    <!-- Include the qrcode.js library -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="./mainpage.html" class="logo">OneHeart</a>
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="account.png" alt="Account Icon">
+                </button>
+                <div class="dropdown-content">
+                    <a href="./signIN.html">Sign In</a>
+                    <a href="./login.html">Log In</a>
+                    <a href="./generate_qr_code.html">CodeQR-PROFILE</a>
+                </div>
+            </div>
+            <a href="./mainpage.html">Home</a>
+            <a href="./chat.html">Do you need help?</a>
+            <a href="./news.html">News</a>
+            <a href="./index.html">Calendar</a> 
+            <a href="./contact.html">Contact</a>
+            <a href="./Communty.html">Clubs</a>
+        </nav>
+    </header>
+    <h2>Your QR Code</h2>
+    
+    <!-- This div will hold the generated QR code -->
+    <div id="qrcode"></div>
+    
+  
+    <div id="qrcode"></div>
+
+    <script>
+        // Replace 'user-data' with the actual data you want to encode
+        var userData = {
+            name: '{{ user_profile.name }}',
+            language: '{{ user_profile.language }}'
+        };
+
+        // Generate the QR code and display it in the 'qrcode' div
+        var qr = new QRCode(document.getElementById("qrcode"), {
+            text: JSON.stringify(userData),
+            width: 128,
+            height: 128
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #chat-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 60px;
+            margin-left: 15cm;
+        }
+
+        .language-option {
+            margin-top: 2cm;
+        }
+
+        .audioPlayer {
+            margin-left: 15cm;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="./mainpage.html" class="logo">OneHeart</a>
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="account.png" alt="Account Icon">
+                </button>
+                <div class="dropdown-content">
+                    <a href="./signIN.html">Sign In</a>
+                    <a href="./login.html">Log In</a>
+                    <a href="./generate_qr_code.html">CodeQR-PROFILE</a>
+                </div>
+            </div>
+            <a href="./mainpage.html">Home</a>
+            <a href="./chat.html">Do you need help?</a>
+            <a href="./news.html">News</a>
+            <a href="./index.html">Calendar</a> 
+            <a href="./contact.html">Contact</a>
+            <a href="./translate.html">Audio-Theatre</a> 
+            <a href="./Communty.html">Clubs</a>   
+        </nav>
+    </header>
+    <img src="./scrisoare.png" id="chat-image"/>
+    <table style="margin-right:12cm;">
+        <tr>
+            <td><h3 class="language-option" id="english-header">English</h3></td>
+            <td><audio controls class="audioPlayer">
+        <source src="C:\Users\georg\Polihack1\polihack\app\templates\app\engleza.mp3" type="audio/mp3">
+    </audio>
+</td>
+        </tr>
+        <tr>
+            <td><h3 class="language-option" id="romanian-header">Romana</h3></td>
+            <td> <audio controls class="audioPlayer">
+                <source src="C:\Users\georg\Polihack1\polihack\app\templates\app\romana.mp3" type="audio/mp3">
+            </audio></td>
+        </tr>
+    </table>
+    
+    
+    
+   
+</body>
+</html>

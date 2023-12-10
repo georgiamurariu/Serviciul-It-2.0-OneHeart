@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="news.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    
+    .card {
+      width: 300px;
+      margin: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-footer {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+    }
+
+    .btn {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      text-align: center;
+    }
+  </style>
+
+  <title>News</title>
+</head>
+<body>
+  <header class="header">
+    <a href="./mainpage.html" class="logo">OneHeart</a>
+    <nav class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="account.png" alt="Account Icon">
+            </button>
+            <div class="dropdown-content">
+                <a href="./signIN.html">Sign In</a>
+                <a href="./login.html">Log In</a>
+                <a href="./generate_qr_code.html">CodeQR-PROFILE</a>
+            </div>
+        </div>
+        <a href="./mainpage.html">Home</a>
+        <a href="./chat.html">Do you need help?</a>
+        <a href="./news.html">News</a>
+        <a href="./index.html">Calendar</a> 
+        <a href="./contact.html">Contact</a>
+        <a href="./translate.html">Audio-Theatre</a>
+        <a href="./Communty.html">Clubs</a>
+    </nav>
+</header>
+
+
+  <img class="pulsate" src="oh.png" alt="oh" width="400" height="500" style="margin-top: 7px;"/>
+
+  <table style="margin-top:15cm;">
+    <tr>
+      <td>
+        <div class="card">
+          <div class="card-header card-image">
+            <img src="1.jpg" alt="Event Image">
+          </div>
+          <div class="card-body">
+            <h5>10 Dec</h5>
+            <h5>Târgul de Crăciun Cluj-Napoca 2023</h5>
+          </div>
+          <div class="card-footer">
+            <button class="btn" onclick="window.location.href='https://www.clujlife.com/eveniment/targul-de-craciun-cluj-napoca-2023/'">Details</button>
+          </div>
+        </div>
+      </td>
+      
+      <td>
+        <div class="card">
+          <div class="card-header card-image">
+            <img src="2.jpg" alt="Event Image">
+          </div>
+          <div class="card-body">
+            <h5>10 Dec</h5>
+            <h5>Târgul de Iarnă din Cluj-Napoca 2023</h5>
+          </div>
+          <div class="card-footer">
+            <button class="btn" onclick="window.location.href='https://www.clujlife.com/eveniment/targul-de-iarna-din-cluj-napoca-2023/'">Details</button>
+          </div>
+        </div>
+      </td>
+      
+      <td>
+        <div class="card">
+          <div class="card-header card-image">
+            <img src="3.jpg" alt="Event Image">
+          </div>
+          <div class="card-body">
+            <h5>10 Dec</h5>
+            <h5>Plantam un Mar- spectacol lectura</h5>
+          </div>
+          <div class="card-footer">
+            <button class="btn" onclick="window.location.href='https://www.clujlife.com/eveniment/program-cinema-arta/'">Details</button>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="card">
+          <div class="card-header card-image">
+          <img src="5.jpg">
+        </div>
+        <div class="card-body">
+          <table>
+            <td><tr><h5>10 Dec</h5> </tr>
+              <tr><h5>Cursuri de limbi straine cu vorbitori nativi</h5> </tr>
+            </td>
+            
+          </table>
+          <div class="card-footer">
+            <button class="btn"><a href="https://www.clujlife.com/eveniment/nastratin/" target="_top">Details</a></button>
+          </div>
+          </div>
+    </div>
+
+      </td>
+      <td>
+        <div class="card">
+          <div class="card-header card-image">
+            <img src="6.jpg">
+          </div>
+          <div class="card-body">
+            <table>
+              <td><tr><h5>10 Dec</h5> </tr>
+                <tr><h5>Gala Muliculturalitatii</h5> </tr>
+              </td>
+              
+            </table>
+            <div class="card-footer">
+              <button class="btn"><a href="https://www.clujlife.com/eveniment/sub-apa-viz-alatt/"target="_top">Details</a></button>
+            </div>
+        </div>
+      </div>
+      </td>
+      <td> <div class="card">
+        <div class="card-header card-image">
+          <img src="7.jpg">
+        </div>
+        <div class="card-body">
+          <table>
+            <td><tr><h5>10 Dec</h5> </tr>
+              <tr><h5>Interlingua</h5> </tr>
+            </td>
+            
+          </table>
+          <div class="card-footer">
+            <button class="btn"><a href="https://www.clujlife.com/eveniment/moby-dick-live-hardward-pub/" target="_top">Details</a></button>
+          </div>
+          </div>
+        </div></td>
+    </tr>
+    <tr>
+      <td><div class="card">
+        <div class="card-header card-image">
+          <img src="9.jpg">
+        </div>
+        <div class="card-body">
+          <table>
+            <td><tr><h5>10 Dec</h5> </tr>
+              <tr><h5>Conferința Societății de Antropologie Socială și Culturală</h5> </tr>
+            </td>
+            
+          </table>
+        </div>
+        <div class="card-footer">
+          <button class="btn"><a href="https://www.clujlife.com/eveniment/targ-craciunesc-saliceni-friends/" target="_top">Details</a></button>
+        </div>
+      </div></td>
+      <td> <div class="card">
+        <div class="card-header card-image">
+        <img src="4.jpg">
+      </div>
+      <div class="card-body">
+        <table>
+          <td><h5>10 Dec</h5> </tr>
+            <tr><h5>Săptămâna Europeană a Limbilor</h5> </tr>
+          </td>
+        </table>
+      </div>
+      <div class="card-footer">
+        <button class="btn"><a href="https://www.clujlife.com/eveniment/galeria-de-stil-winter-edition/" target="_top">Details</a></button>
+      </div>
+    </div></td>
+    <td><div class="card">
+      <div class="card-header card-image">
+        <img src="8.jpg">
+      </div>
+      <div class="card-body">
+        <table>
+          <td><tr><h5>10 Dec</h5> </tr>
+            <tr><h5>Respecting Diversity</h5> </tr>
+          </td>
+          
+        </table>
+        <div class="card-footer">
+          <button class="btn"><a href="https://www.clujlife.com/eveniment/heart-society-antonia/" target="_top">Details</a></button>
+        </div>
+        </div>
+      </div></td>
+    </tr>
+
+ 
+
+  </table>
+</body>
+</html>
